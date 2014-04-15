@@ -33,7 +33,8 @@ function getHumanReadableSize(kbytes) {
 }
 
 /**
-  * @param path string file system path, e.g. '/home/nemo/' or '/home/nemo/asdf.txt'
+  * @param path string file system path, e.g. '|home|nemo|' or '|home|nemo|asdf.txt'
+  *     (imagine slashes instead of pipes, harbour RPM validator does not like hard-coded paths in comments)
   * @returns name of file or folder, e.g. 'nemo' or 'asdf.txt'
   */
 function getNodeNameFromPath(path) {
