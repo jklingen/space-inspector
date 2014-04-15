@@ -20,7 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.spaceinspector.shell 1.0
+import harbour.space.inspector.shell 1.0
 import "../js/IoTranslator.js" as IoTranslator
 import "../js/Util.js" as Util
 

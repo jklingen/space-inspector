@@ -26,7 +26,7 @@
 
 int main(int argc, char *argv[])
 {
-    qmlRegisterType<Shell>("harbour.spaceinspector.shell", 1, 0, "Shell");
+    qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
 
     return SailfishApp::main(argc, argv);
 }
