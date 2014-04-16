@@ -33,7 +33,10 @@ Item {
             var subNodes = IoTranslator.SubDirsWithSize.parseResult(response);
             // the response contains summarized information for the current directory, too. let's update our model with it.
             for(var i=0; i<subNodes.length; i++) {
-                if(subNodes[i].dir === nodeModel.dir) nodeModel = subNodes.splice(i,1)[0];
+                if(subNodes[i].dir === nodeModel.dir) {
+                    nodeModel = subNodes.splice(i,1)[0];
+                    break;
+                }
             }
             subNodesMemoId = Memory.store(subNodes);
             onSubNodeInfoReceived();
