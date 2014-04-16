@@ -69,7 +69,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
-            text: "<strong>Version 0.1</strong><br>Copyright © 2014 Jens Klingen"
+            text: "<strong>Version 0.1-3</strong><br>Copyright © 2014 Jens Klingen"
             font.pixelSize: Theme.fontSizeSmall
         }
         Label {
