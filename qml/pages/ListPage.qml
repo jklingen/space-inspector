@@ -72,13 +72,18 @@ Page {
 
         Component {
             id:subDirsDelegate
-            Rectangle {
+            ListItem {
 
                 id: itemDelegate
                 anchors.left: parent.left
                 width: parent.width
-                height: Theme.itemSizeSmall
-                color: mArea.pressed ? Theme.secondaryHighlightColor : "transparent"
+                height: Theme.itemSizeSmall + contextMenu.height
+                menu:contextMenu
+
+                Rectangle {
+                    id:itemBg
+                    color: itemDelegate.pressed ? Theme.secondaryHighlightColor : "transparent"
+                }
 
                 Label {
                     id: dirName
@@ -87,8 +92,9 @@ Page {
                     height: parent.height
                     verticalAlignment: Text.AlignVCenter
                     text: Util.getNodeNameFromPath(model.dir);
-                    color: mArea.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                    color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
                 }
+
                 Label {
                     id: dirSize
                     anchors.right: parent.right
@@ -96,22 +102,41 @@ Page {
                     height: parent.height
                     verticalAlignment: Text.AlignVCenter
                     text: model.size
-                    color: mArea.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                    color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
                 }
 
-                MouseArea {
-                    id: mArea
-                    anchors.fill: itemDelegate
-                    enabled: model.isDir
-                    onClicked: {
+                onClicked: {
+                    if(model.isDir) {
                         pageStack.push("ListPage.qml",{nodeModel:model})
                     }
+                }
+
+                NodeContextMenu {
+                    id:contextMenu
+                    nodeModel:model
+                    remorseItem:remorseItem
+                    listViewMode:true
+                }
+
+                RemorseItem {
+                    id:remorseItem
                 }
             }
         }
      }
 
     ShellConnector {}
+
+    Connections {
+        target: engine
+        onWorkerErrorOccurred: {
+            console.log("FileWorker error: ", message, filename);
+            notificationPanel.showTextWithTimer("An error occurred", message);
+        }
+        onFileDeleted: {
+            refreshPage();
+        }
+    }
 
     function displayDirectoryList(subNodesWithSize) {
 
@@ -126,6 +151,12 @@ Page {
 
     function createNodeModel() {
         return {dir:'/', isDir:true}
+    }
+
+    function refreshPage() {
+        if(pageStack.currentPage === page && !pageStack.busy) {
+            pageStack.replace("../pages/ListPage.qml",{nodeModel:pageStack.currentPage.nodeModel})
+        }
     }
 }
 

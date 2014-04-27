@@ -41,8 +41,7 @@ Page {
         Image {
             id: logo
             anchors.top: title.bottom
-            anchors.left: parent.left
-            anchors.margins: Theme.paddingLarge
+            x: Theme.paddingLarge
             source: 'qrc:/img/harbour-space-inspector.png'
             width: 86
             height: 86
@@ -69,7 +68,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
-            text: "<strong>Version 0.2</strong><br>Copyright © 2014 Jens Klingen"
+            text: "<strong>Version 0.3</strong><br>Copyright © 2014 Jens Klingen"
             font.pixelSize: Theme.fontSizeSmall
         }
         Label {
@@ -150,7 +149,7 @@ Page {
             text: '
                 <style>a:link { color: ' + Theme.highlightColor + '; }</style>
                 <a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a> charting implementation
-                by Imran Ghory'
+                by Imran Ghory. Also, thanks to Kari for the excellent work on <a href="https://github.com/karip/harbour-file-browser">File Browser</a>.</p>'
         }
     }}
 

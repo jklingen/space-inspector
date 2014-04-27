@@ -19,7 +19,11 @@ TARGET = harbour-space-inspector
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-space-inspector.cpp \
-    src/shell.cpp
+    src/shell.cpp \
+    src/io/engine.cpp \
+    src/io/fileworker.cpp \
+    src/io/statfileinfo.cpp \
+    src/io/globals.cpp
 
 OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/cover/CoverPage.qml \
@@ -39,10 +43,17 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/ShellConnector.qml \
     qml/pages/CoverPage.qml \
     qml/components/ActivityIndicator.qml \
-    qml/pages/InfoPage.qml
+    qml/pages/InfoPage.qml \
+    qml/components/NotificationPanel.qml \
+    qml/pages/DeleteDialog.qml \
+    qml/components/NodeContextMenu.qml
 
 HEADERS += \
-    src/shell.h
+    src/shell.h \
+    src/io/engine.h \
+    src/io/fileworker.h \
+    src/io/statfileinfo.h \
+    src/io/globals.h
 
 RESOURCES += \
     resources/resources.qrc

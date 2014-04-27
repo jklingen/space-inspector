@@ -18,23 +18,39 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 import "../js/Util.js" as Util
+
 
 Rectangle {
 
+    id:treeMapNode
     property var nodeModel
+    property double nodeLeft
+    property double nodeTop
+    property double nodeWidth
+    property double nodeHeight
+    width: contextMenu.active ? contextMenu.width : nodeWidth
+    height: nodeHeight + contextMenu.height
+    x: contextMenu.active ? 0 : nodeLeft
+    y: nodeTop
 
     color: 'transparent'
 
     Rectangle {
-        anchors.fill: parent
+        x: contextMenu.active ? nodeLeft : 0;
+        width: nodeWidth
+        height: nodeHeight
         color: Theme.secondaryHighlightColor
         opacity:mArea.pressed ? 1 : (nodeModel && nodeModel.isDir ? 0.5 : 0.25);
     }
 
     Label{
         id: label
-        anchors.fill: parent
+        x: contextMenu.active ? nodeLeft : 0
+        y: 0
+        width: nodeWidth
+        height: nodeHeight
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         color: mArea.pressed || (nodeModel && nodeModel.isDir) ? Theme.highlightColor : Theme.primaryColor
@@ -51,12 +67,38 @@ Rectangle {
     MouseArea {
         id: mArea
         anchors.fill: parent
-        enabled: nodeModel.isDir
         onClicked: {
-            pageStack.push("../pages/TreeMapPage.qml",{nodeModel:nodeModel})
+            if(nodeModel.isDir) {
+                pageStack.push("../pages/TreeMapPage.qml",{nodeModel:nodeModel})
+            }
         }
-        /*onPressAndHold: {
-            console.log('hold')
-        }*/
+        onPressAndHold: {
+            treeMapNode.z = 1000; // ensure context menu is on top
+            contextMenu.show(treeMapNode);
+        }
     }
+
+    // less transparent background for contextmenu, for better readability (displayed on top of other tree nodes)
+    Rectangle {
+        color:'black'
+        opacity:0.8
+        x:contextMenu.x
+        y:contextMenu.y
+        width:contextMenu.width
+        height:contextMenu.height
+    }
+
+    NodeContextMenu {
+        id:contextMenu
+        nodeModel:treeMapNode.nodeModel
+        remorseItem:remorsePopup
+        onClosed: {
+            treeMapNode.z = 1;
+        }
+    }
+
+    RemorsePopup {
+        id:remorsePopup
+    }
+
 }

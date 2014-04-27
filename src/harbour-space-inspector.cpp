@@ -21,14 +21,38 @@
 #endif
 #include <QtQml>
 #include <sailfishapp.h>
+#include <QScopedPointer>
+#include <QQuickView>
+#include <QQmlEngine>
+#include <QGuiApplication>
+#include <QQmlContext>
+#include <QtQuick/QQuickPaintedItem>
 #include "shell.h"
+#include "io/engine.h"
 
 
 int main(int argc, char *argv[])
 {
     qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
 
-    return SailfishApp::main(argc, argv);
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+
+    QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    // QML global engine object
+    QScopedPointer<Engine> engine(new Engine);
+    view->rootContext()->setContextProperty("engine", engine.data());
+
+    // store pointer to engine to access it in any class, to make it a singleton
+    QVariant engineVariant = qVariantFromValue(engine.data());
+    qApp->setProperty("engine", engineVariant);
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-space-inspector.qml"));
+    view->show();
+
+    return app->exec();
+
+    //return SailfishApp::main(argc, argv);
 }
 
 

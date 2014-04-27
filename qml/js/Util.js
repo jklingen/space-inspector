@@ -45,4 +45,20 @@ function getNodeNameFromPath(path) {
     return last;
 }
 
+/**
+ * Decides whether we can assume that the file will be handled by the operating system, depending solely on file extension.
+ */
+function canHandleFile(path) {
+    var supported = ['mp3','mp4','jpeg','jpg','pdf','html'];
+    var ext = path.substring(path.lastIndexOf('.') + 1);
+    if(ext.length < 5) {
+        ext = ext.toLowerCase();
+        for(var i=0;i<supported.length; i++) {
+            if(supported[i] === ext) return true;
+        }
+    }
+    return false;
+}
+
+
 

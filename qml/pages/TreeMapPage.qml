@@ -67,7 +67,24 @@ Page {
         }
     }
 
+    NotificationPanel {
+        id: notificationPanel
+        page: page
+    }
+
+
     ShellConnector {}
+
+    Connections {
+        target: engine
+        onWorkerErrorOccurred: {
+            console.log("FileWorker error: ", message, filename);
+            notificationPanel.showTextWithTimer("An error occurred", message);
+        }
+        onFileDeleted: {
+            refreshPage();
+        }
+    }
 
     function displayDirectoryList(subNodesWithSize) {
 
@@ -82,10 +99,10 @@ Page {
             if(nodeComponent.status === Component.Ready) {
                 var nodeConfig = {
                     nodeModel: subNodesWithSize[i],
-                    x: coord[0] + 1,
-                    y: coord[1] + 1,
-                    width: coord[2] - coord[0] - 1,
-                    height: coord[3] - coord[1] - 1
+                    nodeLeft: coord[0] + 1,
+                    nodeTop: coord[1] + 1,
+                    nodeWidth: coord[2] - coord[0] - 1,
+                    nodeHeight: coord[3] - coord[1] - 1
 
                 };
                 nodeComponent.createObject(treeMap, nodeConfig);
@@ -99,6 +116,13 @@ Page {
     function createNodeModel() {
         return {dir:'/', isDir:true, size: 0}
     }
+
+    function refreshPage() {
+        if(pageStack.currentPage === page && !pageStack.busy) {
+            pageStack.replace("../pages/TreeMapPage.qml",{nodeModel:pageStack.currentPage.nodeModel})
+        }
+    }
+
 
 }
 
