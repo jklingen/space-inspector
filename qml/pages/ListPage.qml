@@ -64,7 +64,6 @@ Page {
         SilicaListView {
             id: listView
             anchors.fill: parent
-            clip: true
             anchors.topMargin: title.height + Theme.paddingSmall
             VerticalScrollDecorator {}
             model: subDirsModel

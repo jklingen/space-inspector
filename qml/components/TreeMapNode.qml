@@ -25,7 +25,6 @@ Rectangle {
     property variant nodeModel
 
     color: 'transparent'
-    clip:true
 
     Rectangle {
         anchors.fill: parent
