@@ -39,6 +39,7 @@ void Shell::execute(QString command)
 void Shell::processFinishedHandler( int signum )
 {
     QTextStream stream(m_process);
+    m_process->deleteLater();
     emit executed(stream.readAll());
 }
 
