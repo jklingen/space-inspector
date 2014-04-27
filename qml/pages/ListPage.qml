@@ -28,7 +28,7 @@ import "../js/Util.js" as Util
 Page {
     id: page
 
-    property variant nodeModel: createNodeModel()
+    property var nodeModel: createNodeModel()
 
     SilicaFlickable {
         id:sf

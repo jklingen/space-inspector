@@ -29,7 +29,7 @@ import "../js/Memory.js" as Memory
 Page {
     id: page
 
-    property variant nodeModel: createNodeModel()
+    property var nodeModel: createNodeModel()
 
 
     SilicaFlickable {

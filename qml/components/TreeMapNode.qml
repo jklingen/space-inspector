@@ -22,7 +22,7 @@ import "../js/Util.js" as Util
 
 Rectangle {
 
-    property variant nodeModel
+    property var nodeModel
 
     color: 'transparent'
 
