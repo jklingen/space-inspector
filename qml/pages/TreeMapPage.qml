@@ -41,6 +41,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: "Refresh"
+                onClicked: {
+                    refreshPage()
+                }
+            }
+            MenuItem {
                 text: "List view"
                 onClicked: {
                     pageStack.replace("../pages/ListPage.qml",{nodeModel:nodeModel})

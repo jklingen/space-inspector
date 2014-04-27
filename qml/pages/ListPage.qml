@@ -40,6 +40,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: "Refresh"
+                onClicked: {
+                    refreshPage()
+                }
+            }
+            MenuItem {
                 text: "Box view"
                 onClicked: {
                     pageStack.replace("../pages/TreeMapPage.qml",{nodeModel:nodeModel})
