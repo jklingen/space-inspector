@@ -56,7 +56,7 @@ Page {
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
             text: "Space Inspector"
-            color:Theme.secondaryHighlightColor
+            color:Theme.highlightColor
             font.pixelSize: Theme.fontSizeLarge
         }
 
@@ -68,7 +68,8 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
-            text: "<strong>Version 0.3</strong><br>Copyright © 2014 Jens Klingen"
+            text: "<strong>Version 0.4</strong><br>Copyright © 2014 Jens Klingen"
+            color: Theme.secondaryHighlightColor
             font.pixelSize: Theme.fontSizeSmall
         }
         Label {
@@ -80,6 +81,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
+            color: Theme.highlightColor
             text: "No matter how much storage\nyou’ve got — it will be full."
         }
 
@@ -91,8 +93,8 @@ Page {
             anchors.margins: Theme.paddingLarge
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
+            color: Theme.highlightColor
             text: "Space Inspector helps to find large folders and files on your storage."
-            //text: "Space Inspector helps  you to find out what large portions of your device's storage are used for, by visualizing space usage for each directory level."
         }
 
         Label {
@@ -103,6 +105,7 @@ Page {
             anchors.margins: Theme.paddingLarge
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
+            color: Theme.highlightColor
             text: "Questions, problems, suggestions?"
         }
 
@@ -123,6 +126,7 @@ Page {
             anchors.margins: Theme.paddingLarge
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
+            color: Theme.highlightColor
             text: "Free & open source!"
         }
 
@@ -146,8 +150,9 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
+            color: Theme.secondaryHighlightColor
             text: '
-                <style>a:link { color: ' + Theme.highlightColor + '; }</style>
+                <style>a:link { color: ' + Theme.primaryColor + '; }</style>
                 <a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a> charting implementation
                 by Imran Ghory. Also, thanks to Kari for the excellent work on <a href="https://github.com/karip/harbour-file-browser">File Browser</a>.</p>'
         }

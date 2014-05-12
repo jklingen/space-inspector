@@ -29,6 +29,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         width:busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
+        color:Theme.highlightColor
         text: 'Estimating\nspace usage.'
         font.pixelSize: Theme.fontSizeLarge
     }
@@ -39,6 +40,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         width:busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
+        color:Theme.highlightColor
         text: 'This might take\nsome seconds.'
         font.pixelSize: Theme.fontSizeLarge
     }

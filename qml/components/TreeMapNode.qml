@@ -53,7 +53,7 @@ Rectangle {
         height: nodeHeight
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: mArea.pressed || (nodeModel && nodeModel.isDir) ? Theme.highlightColor : Theme.primaryColor
+        color: mArea.pressed || (nodeModel && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
         text: Util.getNodeNameFromPath(nodeModel.dir) + '\n' + Util.getHumanReadableSize(nodeModel.size)
         // try to optimize text display for smaller rectangles...
         onPaintedWidthChanged: {

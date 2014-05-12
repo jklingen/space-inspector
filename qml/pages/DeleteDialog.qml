@@ -24,7 +24,7 @@ Dialog {
         Label {
             anchors.topMargin: Theme.paddingLarge
             text: "Do you really want to delete the following " + (nodeModel.isDir ? "folder?" : "file?")
-            color: Theme.primaryColor
+            color: Theme.highlightColor
             width:parent.width
             wrapMode: Text.Wrap
         }
@@ -42,7 +42,7 @@ Dialog {
 
         Label {
             text: "Always keep in mind: deleting things might break things, or even leave your phone in an unusable state. Use with caution."
-            color: Theme.primaryColor
+            color: Theme.highlightColor
             width:parent.width
             wrapMode: Text.Wrap
         }

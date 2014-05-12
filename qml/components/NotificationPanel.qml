@@ -79,7 +79,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             text: ""
             wrapMode: Text.Wrap
-            color: Theme.primaryColor
+            color: Theme.highlightColor
         }
         Label {
             id: textLabel
@@ -93,7 +93,7 @@ Item {
             text: ""
             wrapMode: Text.Wrap
             font.pixelSize: Theme.fontSizeTiny
-            color: Theme.primaryColor
+            color: Theme.highlightColor
         }
     }
 
