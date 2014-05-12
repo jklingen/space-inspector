@@ -30,11 +30,15 @@ Page {
 
     property var nodeModel: createNodeModel()
 
-    SilicaFlickable {
-        id:sf
+    SilicaListView {
+        id: listView
         anchors.fill: parent
         contentHeight: parent.height
 
+        model: subDirsModel
+        delegate: subDirsDelegate
+
+        VerticalScrollDecorator {}
         GlobalPushUpMenu {}
 
 
@@ -65,15 +69,6 @@ Page {
 
         ListModel {
             id:subDirsModel
-        }
-
-        SilicaListView {
-            id: listView
-            anchors.fill: parent
-            anchors.topMargin: title.height + Theme.paddingSmall
-            VerticalScrollDecorator {}
-            model: subDirsModel
-            delegate: subDirsDelegate
         }
 
         Component {
