@@ -22,7 +22,8 @@
 Shell::Shell(QObject *parent) :
     QObject(parent),
     m_process(new QProcess(this)),
-    m_command()
+    m_command(),
+    m_executeImmediately()
 
 {
 }
