@@ -29,6 +29,7 @@ Item {
 
     Shell {
         command:IoTranslator.SubDirsWithSize.getCommand(nodeModel.dir)
+        executeImmediately:true
         onExecuted: {
             var subNodes = IoTranslator.SubDirsWithSize.parseResult(response);
             // the response contains summarized information for the current directory, too. let's update our model with it.
@@ -45,6 +46,7 @@ Item {
 
     Shell {
         command:IoTranslator.SubDirs.getCommand(nodeModel.dir)
+        executeImmediately:true
         onExecuted: {
             var subDirs = IoTranslator.SubDirs.parseResult(response);
             subDirsMemoId = Memory.store(subDirs);

@@ -26,15 +26,21 @@ class Shell : public QObject, public QQmlParserStatus
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
     Q_PROPERTY(QString command READ command WRITE setCommand)
+    Q_PROPERTY(bool executeImmediately READ executeImmediately WRITE setExecuteImmediately)
+
 public:
     Shell(QObject *parent = 0);
 
     QString command() const;
     void setCommand(const QString &);
+    bool executeImmediately() const;
+    void setExecuteImmediately(const bool &);
+
+    Q_INVOKABLE void execute();
 
     virtual void componentComplete()
     {
-        execute(m_command);
+        if(executeImmediately()) execute();
     }
     virtual void classBegin()
     {
@@ -43,7 +49,8 @@ public:
 private:
     QProcess *m_process;
     QString m_command;
-    void execute(QString command);
+    bool m_executeImmediately;
+
 signals:
     QString executed(const QString &response);
 private slots:

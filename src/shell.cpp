@@ -30,10 +30,13 @@ Shell::Shell(QObject *parent) :
 QString Shell::command() const {return m_command;}
 void Shell::setCommand(const QString & c) {m_command = c;}
 
-void Shell::execute(QString command)
+bool Shell::executeImmediately() const {return m_executeImmediately;}
+void Shell::setExecuteImmediately(const bool & c) {m_executeImmediately = c;}
+
+void Shell::execute()
 {
     QObject::connect(m_process, SIGNAL(finished(int)), SLOT(processFinishedHandler(int)));
-    m_process->start(command);
+    m_process->start(m_command);
 }
 
 void Shell::processFinishedHandler( int signum )
