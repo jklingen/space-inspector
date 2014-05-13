@@ -21,10 +21,8 @@
 #include <QTextStream>
 Shell::Shell(QObject *parent) :
     QObject(parent),
-    m_process(new QProcess(this)),
     m_command(),
     m_executeImmediately()
-
 {
 }
 
@@ -36,6 +34,7 @@ void Shell::setExecuteImmediately(const bool & c) {m_executeImmediately = c;}
 
 void Shell::execute()
 {
+    m_process = new QProcess(this);
     QObject::connect(m_process, SIGNAL(finished(int)), SLOT(processFinishedHandler(int)));
     m_process->start(m_command);
 }
