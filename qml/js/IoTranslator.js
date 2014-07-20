@@ -20,7 +20,7 @@
 
 var SubDirsWithSize = {
     getCommand: function(path) {
-        var command = 'du -a -B 1024 --max-depth=1 ' + path;
+        var command = 'du -a -B 1024 --max-depth=1 "' + path + '"';
         //console.debug(command);
         return command;
     },
@@ -59,7 +59,7 @@ var SubDirsWithSize = {
 
 var SubDirs = {
     getCommand: function(path) {
-        var command = 'find ' + path + ' -maxdepth 1 -type d';
+        var command = 'find  "' + path + '" -maxdepth 1 -type d';
         //console.debug(command);
         return command;
     },
@@ -71,7 +71,7 @@ var SubDirs = {
 
 var DirSize = {
     getCommand: function(path) {
-        var command = 'du -s -B 1024 ' + path;
+        var command = 'du -s -B 1024 "' + path + '"';
         //console.debug(command);
         return command;
     },
