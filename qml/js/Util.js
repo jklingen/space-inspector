@@ -38,6 +38,7 @@ function getHumanReadableSize(kbytes) {
   * @returns name of file or folder, e.g. 'nemo' or 'asdf.txt'
   */
 function getNodeNameFromPath(path) {
+    if(!path) throw "Path may not be null";
     if(path === '/') return path;
     var arr = path.split('/');
     var last = arr.pop();
@@ -49,6 +50,7 @@ function getNodeNameFromPath(path) {
  * Decides whether we can assume that the file will be handled by the operating system, depending solely on file extension.
  */
 function canHandleFile(path) {
+    if(!path) throw "Path may not be null";
     var supported = ['mp3','mp4','jpeg','jpg','pdf','html'];
     var ext = path.substring(path.lastIndexOf('.') + 1);
     if(ext.length < 5) {
