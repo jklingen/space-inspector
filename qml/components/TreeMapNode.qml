@@ -30,6 +30,7 @@ Rectangle {
     property double nodeTop
     property double nodeWidth
     property double nodeHeight
+    // we want a full width context menu for a fixed size rectangle, need some tricks for this
     width: contextMenu.active ? contextMenu.width : nodeWidth
     height: nodeHeight + contextMenu.height
     x: contextMenu.active ? 0 : nodeLeft
@@ -95,10 +96,32 @@ Rectangle {
         onClosed: {
             treeMapNode.z = 1;
         }
+        onCollapseClicked: PropertyAnimation {
+            target:treeMapNode
+            property:"opacity"
+            from: 0.4
+            to: 0
+            duration: 250
+            easing.type: Easing.OutCurve
+            onRunningChanged: {
+                if(!running) collapseSubNode(nodeModel.dir)
+            }
+        }
     }
 
     RemorsePopup {
         id:remorsePopup
+    }
+
+    opacity:0.6
+    Component.onCompleted: PropertyAnimation {
+        running: true
+        target:treeMapNode
+        property:"opacity"
+        from: 0.6
+        to: 1.0
+        duration: 500
+        easing.type: Easing.OutCurve
     }
 
 }

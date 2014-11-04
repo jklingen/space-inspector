@@ -46,7 +46,8 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/pages/InfoPage.qml \
     qml/components/NotificationPanel.qml \
     qml/pages/DeleteDialog.qml \
-    qml/components/NodeContextMenu.qml
+    qml/components/NodeContextMenu.qml \
+    qml/components/TreeMapNodeCollapsed.qml
 
 HEADERS += \
     src/shell.h \

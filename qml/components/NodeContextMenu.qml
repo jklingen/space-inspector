@@ -8,6 +8,14 @@ ContextMenu {
     property var nodeModel
     property Item remorseItem
     property bool listViewMode: false
+    signal collapseClicked;
+
+    MenuItem {
+        text: "Collapse " + Util.getNodeNameFromPath(nodeModel.dir)
+        onClicked: {
+            collapseClicked();
+        }
+    }
 
     MenuItem {
         text: "Open " + Util.getNodeNameFromPath(nodeModel.dir)
