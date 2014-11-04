@@ -26,6 +26,8 @@ import "../js/Util.js" as Util
 
 CoverBackground {
 
+    property var fileSystemInfo
+
     Component.onCompleted: {
         refresh();
     }
@@ -39,6 +41,7 @@ CoverBackground {
         anchors.top: parent.top
         anchors.margins: Theme.paddingLarge
         wrapMode: Text.WordWrap
+        text: getLabelText()
     }
 
     Image {
@@ -60,17 +63,19 @@ CoverBackground {
         }
     }
 
+    function getLabelText() {
+        return fileSystemInfo ? fileSystemInfo.Used + '\nused of\n' + fileSystemInfo.Size + '\n(' + fileSystemInfo['Use%'] +')' : '';
+    }
+
     function refresh() {
-        /*var fsi = IoService.getFileSysInfo();
-        label.text = fsi.Used + '\nused of\n' + fsi.Size + '\n(' + fsi['Use%'] +')';*/
+        fileSysShell.execute();
     }
 
     Shell {
+        id:fileSysShell
         command:IoTranslator.FileSysInfo.getCommand('/')
-        executeImmediately:true
         onExecuted: {
-            var fsi = IoTranslator.FileSysInfo.parseResult(response);
-            label.text = fsi.Used + '\nused of\n' + fsi.Size + '\n(' + fsi['Use%'] +')';
+            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response);
         }
     }
 }
