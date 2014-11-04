@@ -67,6 +67,7 @@ CoverBackground {
 
     Shell {
         command:IoTranslator.FileSysInfo.getCommand('/')
+        executeImmediately:true
         onExecuted: {
             var fsi = IoTranslator.FileSysInfo.parseResult(response);
             label.text = fsi.Used + '\nused of\n' + fsi.Size + '\n(' + fsi['Use%'] +')';
