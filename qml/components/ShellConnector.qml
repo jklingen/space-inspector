@@ -28,6 +28,7 @@ Item {
     property int subNodesMemoId: -1
 
     Shell {
+        id:subNodesShell
         command:IoTranslator.SubDirsWithSize.getCommand(nodeModel.dir)
         executeImmediately:true
         onExecuted: {
@@ -45,6 +46,7 @@ Item {
     }
 
     Shell {
+        id:subDirsShell
         command:IoTranslator.SubDirs.getCommand(nodeModel.dir)
         executeImmediately:true
         onExecuted: {
@@ -69,5 +71,11 @@ Item {
             subDirsMemoId = -1;
             subNodesMemoId = -1;
         }
+    }
+
+    function refresh() {
+        subNodesShell.execute();
+        subDirsShell.execute();
+
     }
 }
