@@ -12,6 +12,7 @@ ContextMenu {
 
     MenuItem {
         text: "Collapse " + Util.getNodeNameFromPath(nodeModel.dir)
+        visible:!listViewMode
         onClicked: {
             collapseClicked();
         }
