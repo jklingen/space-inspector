@@ -35,7 +35,7 @@ Page {
 
         PageHeader {
             id: title
-            title: 'About'
+            title: qsTr('About')
         }
 
         Image {
@@ -68,7 +68,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
-            text: "<strong>Version 0.4</strong><br>Copyright © 2014 Jens Klingen"
+            text: qsTr("<strong>Version 0.4</strong><br>Copyright © 2014 Jens Klingen")
             color: Theme.secondaryHighlightColor
             font.pixelSize: Theme.fontSizeSmall
         }
@@ -82,7 +82,7 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
             color: Theme.highlightColor
-            text: "No matter how much storage\nyou’ve got — it will be full."
+            text: qsTr("No matter how much storage\nyou’ve got — it will be full.")
         }
 
         Label {
@@ -94,7 +94,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
             color: Theme.highlightColor
-            text: "Space Inspector helps to find large folders and files on your storage."
+            text: qsTr("Space Inspector helps to find large folders and files on your storage.")
         }
 
         Label {
@@ -106,14 +106,14 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
             color: Theme.highlightColor
-            text: "Questions, problems, suggestions?"
+            text: qsTr("Questions, problems, suggestions?")
         }
 
         Button {
             id: github
             anchors.top: feedback.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: 'Get in touch'
+            text: qsTr('Get in touch')
             onClicked: Qt.openUrlExternally("https://github.com/jklingen/space-inspector/issues");
         }
 
@@ -127,7 +127,7 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
             color: Theme.highlightColor
-            text: "Free & open source!"
+            text: qsTr("Free & open source!")
         }
 
 
@@ -136,7 +136,7 @@ Page {
             id:gpl
             anchors.top: license.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            text: 'GPL version 3'
+            text: qsTr('GPL version 3')
             onClicked: Qt.openUrlExternally("http://www.gnu.org/licenses/gpl-3.0.txt");
         }
 
@@ -151,10 +151,10 @@ Page {
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
             color: Theme.secondaryHighlightColor
-            text: '
-                <style>a:link { color: ' + Theme.primaryColor + '; }</style>
+            text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' + qsTr('
                 <a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a> charting implementation
-                by Imran Ghory. Also, thanks to Kari for the excellent work on <a href="https://github.com/karip/harbour-file-browser">File Browser</a>.</p>'
+                by Imran Ghory. Also, thanks to Kari for the excellent work on
+                <a href="https://github.com/karip/harbour-file-browser">File Browser</a>.</p>')
         }
     }}
 

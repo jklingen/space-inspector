@@ -30,7 +30,7 @@ Item {
         width:busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
         color:Theme.highlightColor
-        text: 'Estimating\nspace usage.'
+        text: qsTr('Estimating\nspace usage.')
         font.pixelSize: Theme.fontSizeLarge
     }
 
@@ -41,7 +41,7 @@ Item {
         width:busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
         color:Theme.highlightColor
-        text: 'This might take\nsome seconds.'
+        text: qsTr('This might take\nsome seconds.')
         font.pixelSize: Theme.fontSizeLarge
     }
 

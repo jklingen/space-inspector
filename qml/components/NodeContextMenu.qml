@@ -11,7 +11,7 @@ ContextMenu {
     signal collapseClicked;
 
     MenuItem {
-        text: "Collapse " + Util.getNodeNameFromPath(nodeModel.dir)
+        text: qsTr("Collapse %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
         visible:!listViewMode
         onClicked: {
             collapseClicked();
@@ -19,7 +19,7 @@ ContextMenu {
     }
 
     MenuItem {
-        text: "Open " + Util.getNodeNameFromPath(nodeModel.dir)
+        text: qsTr("Open %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
         onClicked: {
             console.log("Trying to open file://" + nodeModel.dir)
             Qt.openUrlExternally("file://" + nodeModel.dir);
@@ -29,7 +29,7 @@ ContextMenu {
     }
 
     MenuItem {
-        text: "Delete " + Util.getNodeNameFromPath(nodeModel.dir)
+        text: qsTr("Delete %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
         onClicked: {
             var dialog = pageStack.push("../pages/DeleteDialog.qml",{nodeModel:nodeModel})
             dialog.accepted.connect(onDialogAccepted);

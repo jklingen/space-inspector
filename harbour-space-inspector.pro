@@ -18,6 +18,14 @@ TARGET = harbour-space-inspector
 
 CONFIG += sailfishapp
 
+
+i18n.path = /usr/share/harbour-space-inspector/i18n
+i18n.files = i18n/space-inspector_de.qm
+
+INSTALLS += i18n
+
+#system(lrelease $$PWD/i18n/*.ts)
+
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
     src/io/engine.cpp \
@@ -47,7 +55,8 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/NotificationPanel.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
-    qml/components/TreeMapNodeCollapsed.qml
+    qml/components/TreeMapNodeCollapsed.qml\
+    i18n/space-inspector_de.ts
 
 HEADERS += \
     src/shell.h \
@@ -58,4 +67,14 @@ HEADERS += \
 
 RESOURCES += \
     resources/resources.qrc
+
+TRANSLATIONS = \
+    i18n/space-inspector_de.ts
+
+lupdate_only {
+SOURCES += \
+    qml/pages/*.qml \
+    qml/components/*.qml
+}
+
 

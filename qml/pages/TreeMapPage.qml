@@ -42,13 +42,13 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "Refresh"
+                text: qsTr("Refresh")
                 onClicked: {
                     refreshPage()
                 }
             }
             MenuItem {
-                text: "List view"
+                text: qsTr("List view")
                 onClicked: {
                     pageStack.replace("../pages/ListPage.qml",{nodeModel:nodeModel})
                 }
@@ -108,7 +108,7 @@ Page {
         target: engine
         onWorkerErrorOccurred: {
             console.log("FileWorker error: ", message, filename);
-            notificationPanel.showTextWithTimer("An error occurred", message);
+            notificationPanel.showTextWithTimer(qsTr("An error occurred"), message);
         }
         onFileDeleted: {
             refreshPage();
