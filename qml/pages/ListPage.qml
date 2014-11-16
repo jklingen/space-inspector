@@ -102,7 +102,7 @@ Page {
                     anchors.rightMargin: Theme.paddingLarge
                     height: parent.height
                     verticalAlignment: Text.AlignVCenter
-                    text: model.size
+                    text: parseInt(model.size).toLocaleString()
                     color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
                 }
 
