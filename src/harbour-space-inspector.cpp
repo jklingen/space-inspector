@@ -27,6 +27,7 @@
 #include <QGuiApplication>
 #include <QQmlContext>
 #include <QtQuick/QQuickPaintedItem>
+#include <QTranslator>
 #include "shell.h"
 #include "io/engine.h"
 
@@ -37,11 +38,19 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
+    QTranslator* translator = new QTranslator;
+    if(!translator->load("space-inspector_" + QLocale::system().name(), SailfishApp::pathTo("i18n").toLocalFile())) {
+        qDebug() << "Couldn't load translation";
+    }
+    app->installTranslator(translator);
+
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // QML global engine object
     QScopedPointer<Engine> engine(new Engine);
     view->rootContext()->setContextProperty("engine", engine.data());
+
+
 
     // store pointer to engine to access it in any class, to make it a singleton
     QVariant engineVariant = qVariantFromValue(engine.data());
