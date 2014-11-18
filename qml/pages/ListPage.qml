@@ -110,7 +110,7 @@ Page {
                         anchors.rightMargin: Theme.paddingLarge
                         height: parent.height
                         verticalAlignment: Text.AlignVCenter
-                        text: parseInt(model.size).toLocaleString()
+                        text: parseInt(model.size).toLocaleString(Qt.locale(), "f", 0) + " KB"
                         color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
                     }
 
