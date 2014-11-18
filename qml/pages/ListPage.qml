@@ -30,15 +30,11 @@ Page {
 
     property var nodeModel: createNodeModel()
 
-    SilicaListView {
-        id: listView
+    SilicaFlickable {
+        id:sf
         anchors.fill: parent
         contentHeight: parent.height
 
-        model: subDirsModel
-        delegate: subDirsDelegate
-
-        VerticalScrollDecorator {}
         GlobalPushUpMenu {}
 
 
@@ -67,64 +63,77 @@ Page {
             anchors.fill:parent
         }
 
-        ListModel {
-            id:subDirsModel
-        }
+        SilicaListView {
+            id: listView
+            anchors.top:title.bottom
+            contentHeight: parent.height-title.height
+            width:parent.width
+            height:parent.height-title.height
 
-        Component {
-            id:subDirsDelegate
-            ListItem {
+            model: subDirsModel
+            delegate: subDirsDelegate
 
-                id: itemDelegate
-                anchors.left: parent.left
-                width: parent.width
-                height: Theme.itemSizeSmall + contextMenu.height
-                menu:contextMenu
+            VerticalScrollDecorator {}
 
-                Rectangle {
-                    id:itemBg
-                    color: itemDelegate.pressed ? Theme.secondaryHighlightColor : "transparent"
-                }
+            ListModel {
+                id:subDirsModel
+            }
 
-                Label {
-                    id: dirName
+            Component {
+                id:subDirsDelegate
+                ListItem {
+
+                    id: itemDelegate
                     anchors.left: parent.left
-                    anchors.leftMargin: Theme.paddingLarge
-                    height: parent.height
-                    verticalAlignment: Text.AlignVCenter
-                    text: Util.getNodeNameFromPath(model.dir);
-                    color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
-                }
+                    width: parent.width
+                    height: Theme.itemSizeSmall + contextMenu.height
+                    menu:contextMenu
 
-                Label {
-                    id: dirSize
-                    anchors.right: parent.right
-                    anchors.rightMargin: Theme.paddingLarge
-                    height: parent.height
-                    verticalAlignment: Text.AlignVCenter
-                    text: parseInt(model.size).toLocaleString()
-                    color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
-                }
+                    Rectangle {
+                        id:itemBg
+                        color: itemDelegate.pressed ? Theme.secondaryHighlightColor : "transparent"
+                    }
 
-                onClicked: {
-                    if(model.isDir) {
-                        pageStack.push("ListPage.qml",{nodeModel:model})
+                    Label {
+                        id: dirName
+                        anchors.left: parent.left
+                        anchors.leftMargin: Theme.paddingLarge
+                        height: parent.height
+                        verticalAlignment: Text.AlignVCenter
+                        text: Util.getNodeNameFromPath(model.dir);
+                        color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                    }
+
+                    Label {
+                        id: dirSize
+                        anchors.right: parent.right
+                        anchors.rightMargin: Theme.paddingLarge
+                        height: parent.height
+                        verticalAlignment: Text.AlignVCenter
+                        text: parseInt(model.size).toLocaleString()
+                        color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                    }
+
+                    onClicked: {
+                        if(model.isDir) {
+                            pageStack.push("ListPage.qml",{nodeModel:model})
+                        }
+                    }
+
+                    NodeContextMenu {
+                        id:contextMenu
+                        nodeModel:model
+                        remorseItem:remorseItem
+                        listViewMode:true
+                    }
+
+                    RemorseItem {
+                        id:remorseItem
                     }
                 }
-
-                NodeContextMenu {
-                    id:contextMenu
-                    nodeModel:model
-                    remorseItem:remorseItem
-                    listViewMode:true
-                }
-
-                RemorseItem {
-                    id:remorseItem
-                }
             }
-        }
-     }
+         }
+    }
 
     ShellConnector {}
 
