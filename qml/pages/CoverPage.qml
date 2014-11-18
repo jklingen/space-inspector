@@ -64,7 +64,9 @@ CoverBackground {
     }
 
     function getLabelText() {
-        return fileSystemInfo ? fileSystemInfo.Used + '\nused of\n' + fileSystemInfo.Size + '\n(' + fileSystemInfo['Use%'] +')' : '';
+        return fileSystemInfo
+                ? qsTr('%1 \n used of \n %2 \n (%3)').arg(fileSystemInfo.Used).arg(fileSystemInfo.Size).arg(fileSystemInfo['Use%'])
+                  : '';
     }
 
     function refresh() {

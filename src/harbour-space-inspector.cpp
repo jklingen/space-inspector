@@ -39,7 +39,9 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
     QTranslator* translator = new QTranslator;
-    if(!translator->load("space-inspector_" + QLocale::system().name(), SailfishApp::pathTo("i18n").toLocalFile())) {
+    QString locale = QLocale::system().name();
+    //locale="de"; // for testing purposes only
+    if(!translator->load("space-inspector_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
         qDebug() << "Couldn't load translation";
     }
     app->installTranslator(translator);
