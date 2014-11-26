@@ -68,7 +68,7 @@ Page {
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignRight
             textFormat: Text.RichText
-            text: qsTr("<strong>Version 0.4</strong><br>Copyright © 2014 Jens Klingen")
+            text: qsTr("<strong>Version %1</strong><br>Copyright © %2 Jens Klingen").arg('0.4').arg('2014')
             color: Theme.secondaryHighlightColor
             font.pixelSize: Theme.fontSizeSmall
         }

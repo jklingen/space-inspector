@@ -149,8 +149,8 @@ Permission denied</source>
         <translation>Über</translation>
     </message>
     <message>
-        <source>&lt;strong&gt;Version 0.4&lt;/strong&gt;&lt;br&gt;Copyright © 2014 Jens Klingen</source>
-        <translation type="unfinished">&lt;strong&gt;Version 0,4&lt;/strong&gt;&lt;br&gt;Copyright © 2014 Jens Klingen</translation>
+        <source>&lt;strong&gt;Version %1&lt;/strong&gt;&lt;br&gt;Copyright © %2 Jens Klingen</source>
+        <translation>&lt;strong&gt;Version %1&lt;/strong&gt;&lt;br&gt;Copyright © %2 Jens Klingen</translation>
     </message>
     <message>
         <source>No matter how much storage
