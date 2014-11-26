@@ -160,7 +160,7 @@ Du hast — er wird voll sein.</translation>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
-        <translation type="unfinished">Space Inspektor hilft Dir, große Ordner und Dateien zu lokaliseren.</translation>
+        <translation>Space Inspector hilft Dir, große Ordner und Dateien zu lokaliseren.</translation>
     </message>
     <message>
         <source>Questions, problems, suggestions?</source>
