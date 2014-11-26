@@ -151,10 +151,10 @@ Page {
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
             color: Theme.secondaryHighlightColor
-            text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' + qsTr('
-                <a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a> charting implementation
-                by Imran Ghory. Also, thanks to Kari for the excellent work on
-                <a href="https://github.com/karip/harbour-file-browser">File Browser</a>.</p>')
+            text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
+                qsTr('%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.')
+                    .arg('<a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a>')
+                    .arg('<a href="https://github.com/karip/harbour-file-browser">File Browser</a>')
         }
     }}
 

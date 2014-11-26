@@ -179,19 +179,8 @@ Du hast — er wird voll sein.</translation>
         <translation>GPL Version 3</translation>
     </message>
     <message>
-        <source>&lt;a href=&quot;https://github.com/imranghory/treemap-squared&quot;&gt;Treemap Squared&lt;/a&gt; charting implementation
-                by Imran Ghory. Also, thanks to Kari for the excellent work on
-                &lt;a href=&quot;https://github.com/karip/harbour-file-browser&quot;&gt;File Browser&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;a href=&quot;https://github.com/imranghory/treemap-squared&quot;&gt;Treemap Squared&lt;/a&gt; Diagramm-Implementierung
-                von Imran Ghory. Außerdem vielen Dank an Kari für die großartige Arbeit an
-                &lt;a href=&quot;https://github.com/karip/harbour-file-browser&quot;&gt;File Browser&lt;/a&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>
-                &lt;a href=&quot;https://github.com/imranghory/treemap-squared&quot;&gt;Treemap Squared&lt;/a&gt; charting implementation
-                by Imran Ghory. Also, thanks to Kari for the excellent work on
-                &lt;a href=&quot;https://github.com/karip/harbour-file-browser&quot;&gt;File Browser&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.</source>
+        <translation>%1 Diagramm-Implementierung von Imran Ghory. Außerdem vielen Dank an Kari für die großartige Arbeit an %2.</translation>
     </message>
 </context>
 <context>
