@@ -3,8 +3,8 @@ Summary: Space Inspector
 Version: 0.5
 Release: 1
 Group: Qt/Qt
-URL: http://example.org/
-License: LICENSE
+URL: https://github.com/jklingen/space-inspector
+License: GPL v3
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
