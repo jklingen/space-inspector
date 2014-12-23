@@ -38,13 +38,13 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
-    QTranslator* translator = new QTranslator;
+    QTranslator translator;
     QString locale = QLocale::system().name();
     //locale="de"; // for testing purposes only
-    if(!translator->load("space-inspector_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
+    if(!translator.load("space-inspector_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
         qDebug() << "Couldn't load translation";
     }
-    app->installTranslator(translator);
+    app->installTranslator(&translator);
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
