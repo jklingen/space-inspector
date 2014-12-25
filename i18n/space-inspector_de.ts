@@ -171,10 +171,6 @@ Du hast — er wird voll sein.</translation>
         <translation>Fragen, Probleme, Vorschläge?</translation>
     </message>
     <message>
-        <source>Get in touch</source>
-        <translation>Sag bescheid</translation>
-    </message>
-    <message>
         <source>Free &amp; open source!</source>
         <translation>Frei &amp; open source!</translation>
     </message>
