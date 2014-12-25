@@ -28,10 +28,6 @@ CoverBackground {
 
     property var fileSystemInfo
 
-    Component.onCompleted: {
-        refresh();
-    }
-
     Label {
         id: label
         font.pixelSize: Theme.fontSizeLarge
@@ -66,7 +62,7 @@ CoverBackground {
     function getLabelText() {
         return fileSystemInfo
                 ? qsTr('%1 \n used of \n %2 \n (%3)').arg(fileSystemInfo.Used).arg(fileSystemInfo.Size).arg(fileSystemInfo['Use%'])
-                  : '';
+                  : 'Space\nInspector';
     }
 
     function refresh() {
@@ -80,6 +76,15 @@ CoverBackground {
             fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response);
         }
     }
+
+    Timer {
+        running: true
+        interval: 5000
+        onTriggered: {
+            fileSysShell.execute();
+        }
+    }
+
 }
 
 
