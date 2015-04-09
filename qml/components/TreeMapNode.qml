@@ -43,7 +43,12 @@ Rectangle {
         width: nodeWidth
         height: nodeHeight
         color: Theme.secondaryHighlightColor
-        opacity:mArea.pressed ? 1 : (nodeModel && nodeModel.isDir ? 0.5 : 0.25);
+        opacity:mArea.pressed ? 0.6 : 0.3;
+        Component.onCompleted: {
+            if(!nodeModel.isDir) {
+                color = Qt.hsla(Util.getNormalizedHash(Util.getFileExtension(nodeModel.dir)), 1, 0.5, 0.75);
+            }
+        }
     }
 
     Label{
