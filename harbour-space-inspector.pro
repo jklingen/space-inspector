@@ -17,6 +17,7 @@
 TARGET = harbour-space-inspector
 
 CONFIG += sailfishapp
+CONFIG += sailfishapp_i18n
 
 
 i18n.path = /usr/share/harbour-space-inspector/i18n
