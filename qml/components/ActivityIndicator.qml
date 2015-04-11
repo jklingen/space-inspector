@@ -41,7 +41,7 @@ Item {
         width:busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
         color:Theme.highlightColor
-        text: qsTr('This might take\nsome seconds.')
+        text: qsTr('This might take\na moment.')
         font.pixelSize: Theme.fontSizeLarge
     }
 

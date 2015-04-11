@@ -135,6 +135,11 @@ Page {
          }
     }
 
+    NotificationPanel {
+        id: notificationPanel
+        page: page
+    }
+
     ShellConnector {}
 
     Connections {
