@@ -52,14 +52,50 @@ function getNodeNameFromPath(path) {
 function canHandleFile(path) {
     if(!path) throw "Path may not be null";
     var supported = ['mp3','mp4','jpeg','jpg','pdf','html'];
-    var ext = path.substring(path.lastIndexOf('.') + 1);
-    if(ext.length < 5) {
+    var ext = getFileExtension(path);
+    if(ext && ext.length < 5) {
         ext = ext.toLowerCase();
         for(var i=0;i<supported.length; i++) {
             if(supported[i] === ext) return true;
         }
     }
     return false;
+}
+
+/**
+ * Extracts file extension from path.
+ * The portion after the last "." in the filename is considered to be an extension,
+ * (ecxept when the last dot is the first character of the filename.
+ * Returns null if the file does not have an extension.
+ */
+function getFileExtension(path) {
+    var nodeName = getNodeNameFromPath(path);
+    var dotIdx = nodeName.lastIndexOf(".");
+    return dotIdx>0 ? nodeName.substring(dotIdx + 1) : null;
+}
+
+/**
+ * Hashes a string to a number where 0 <= ret < 1
+ */
+function getNormalizedHash(str) {
+    var ret = 0;
+    if(str) {
+      str = str.toLowerCase();
+
+      for (var i = 0; i < str.length; i++) {
+            var c = str.charCodeAt(i);
+            if(c>=97 && c<123) c -= 97; //a-z will be 0-25
+            else if(c>=48 && c<58) c-= 18; // 0-9 will be 26-35
+            //console.log("should be between 0 and 35: "+c)
+            c = c/35*0.9 // normalize each to be between 0 and 0.9
+            //console.log("should be between 0 and 0.9: "+c)
+            c /= Math.pow(10,i) // 1st letter has more influence than 2nd
+            //console.log(c);
+            ret += c
+        }
+      }
+      //console.log(str+"--->"+ret)
+      return ret
 }
 
 
