@@ -35,6 +35,7 @@ Item {
     }
 
     Label {
+        id: patienceLabel
         anchors.top:busyIndicator.bottom
         anchors.margins: Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
@@ -43,6 +44,35 @@ Item {
         color:Theme.highlightColor
         text: qsTr('This might take\na moment.')
         font.pixelSize: Theme.fontSizeLarge
+    }
+
+    Label {
+        id:anotherPatienceLabel
+        anchors.top:patienceLabel.bottom
+        anchors.margins: Theme.paddingLarge
+        anchors.horizontalCenter: parent.horizontalCenter
+        width:busyIndicator.width
+        horizontalAlignment: Text.AlignHCenter
+        color:Theme.highlightColor
+        opacity: 0
+        //: Context: This might take a moment. Or two.
+        text: qsTr('Or two.')
+        font.pixelSize: Theme.fontSizeLarge
+        NumberAnimation {
+            id:fadeIn
+            target: anotherPatienceLabel
+            property: "opacity"
+            from: 0
+            to: 1
+            duration: 400
+            easing.type: Easing.OutQuad
+        }
+        Timer {
+            running: true
+            interval: 5000
+            onTriggered:fadeIn.start();
+        }
+
     }
 
     BusyIndicator {

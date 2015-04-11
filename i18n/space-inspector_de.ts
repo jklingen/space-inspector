@@ -11,9 +11,14 @@ wird analysiert.</translation>
     </message>
     <message>
         <source>This might take
-some seconds.</source>
+a moment.</source>
         <translation>Dies kann einen
 Moment dauern.</translation>
+    </message>
+    <message>
+        <source>Or two.</source>
+        <extracomment>Context: This might take a moment. Or two.</extracomment>
+        <translation>Oder zwei.</translation>
     </message>
 </context>
 <context>
@@ -145,16 +150,12 @@ Permission denied</source>
 <context>
     <name>InfoPage</name>
     <message>
-        <source>About</source>
-        <translation>Über</translation>
-    </message>
-    <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>Copyright © %2 Jens Klingen</source>
-        <translation>Copyright © %2 Jens Klingen</translation>
+        <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
+        <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
     </message>
     <message>
         <source>No matter how much storage
