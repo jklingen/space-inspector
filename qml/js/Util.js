@@ -70,7 +70,7 @@ function canHandleFile(path) {
  */
 function getFileExtension(path) {
     var nodeName = getNodeNameFromPath(path);
-    var dotIdx = nodeName.indexOf(".");
+    var dotIdx = nodeName.lastIndexOf(".");
     return dotIdx>0 ? nodeName.substring(dotIdx + 1) : null;
 }
 
