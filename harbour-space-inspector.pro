@@ -57,7 +57,8 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
     qml/components/TreeMapNodeCollapsed.qml\
-    i18n/space-inspector_de.ts
+    i18n/space-inspector_de.ts \
+    qml/components/Spacer.qml
 
 HEADERS += \
     src/shell.h \

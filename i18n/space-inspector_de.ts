@@ -183,6 +183,18 @@ Du hast — er wird voll sein.</translation>
         <source>%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.</source>
         <translation>%1 Diagramm-Implementierung von Imran Ghory. Außerdem vielen Dank an Kari für die großartige Arbeit an %2.</translation>
     </message>
+    <message>
+        <source>Do you like this app?</source>
+        <translation>Magst Du diese App?</translation>
+    </message>
+    <message>
+        <source>Buy me a beer :)</source>
+        <translation>Gib mir einen aus :)</translation>
+    </message>
+    <message>
+        <source>Cheers!</source>
+        <translation>Prost!</translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>

@@ -111,14 +111,14 @@ Page {
                     anchors.margins: Theme.paddingLarge
                     font.bold: true
                     color: Theme.highlightColor
-                    text: "Do you like this app?"
+                    text: qsTr("Do you like this app?")
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: 'Buy me a beer :)'
+                    text: qsTr('Buy me a beer :)')
                     onClicked: {
                         Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40jklingen%2ecom&lc=US&item_name=Jens%20Klingen&no_note=0&cn=Message%20to%20Jens%3a&no_shipping=2&rm=1&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amount=3&item_name=A%20beer%20for%Space%20Inspector%20-%20cheers!");
-                        text = 'Cheers!'
+                        text = qsTr('Cheers!')
                     }
                 }
 
