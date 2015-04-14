@@ -49,31 +49,6 @@ belegt von
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>File does not exist
-%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Broken symbolic link
-%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t read this type of file
-%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No permission to read the file
-%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error reading file
-%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Empty file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -90,22 +65,43 @@ belegt von
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot create folder %1
-Permission denied</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cannot create folder %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot rename %1
-%2</source>
+        <source>No files to paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot change permissions
-%1</source>
+        <source>File does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Broken symbolic link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can&apos;t read this type of file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No permission to read the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error reading file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No permissions to create %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot rename %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot change permissions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -224,6 +220,25 @@ Du hast — er wird voll sein.</translation>
     <message>
         <source>Delete %1</source>
         <translation>%1 löschen</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>%1 bytes</source>
+        <translation>%1 Bytes</translation>
+    </message>
+    <message>
+        <source>%1 kB</source>
+        <translation>%1 kB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
 </context>
 <context>
