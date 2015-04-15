@@ -22,13 +22,10 @@ public:
 
     // call these to start the thread, returns false if start failed
     void startDeleteFiles(QStringList filenames);
-    void startCopyFiles(QStringList filenames, QString destDirectory);
-    void startMoveFiles(QStringList filenames, QString destDirectory);
 
     void cancel();
 
 signals: // signals, can be connected from a thread to another
-    void progressChanged(int progress, QString filename);
 
     // one of these is emitted when thread ends
     void done();
@@ -41,7 +38,7 @@ protected:
 
 private:
     enum Mode {
-        DeleteMode, CopyMode, MoveMode
+        DeleteMode
     };
     enum CancelStatus {
         Cancelled = 0, KeepRunning = 1
@@ -51,15 +48,12 @@ private:
 
     QString deleteFile(QString filenames);
     void deleteFiles();
-    void copyOrMoveFiles();
-    QString copyDirRecursively(QString srcDirectory, QString destDirectory);
-    QString copyOverwrite(QString src, QString dest);
 
     FileWorker::Mode m_mode;
     QStringList m_filenames;
     QString m_destDirectory;
     QAtomicInt m_cancelled; // atomic so no locks needed
-    int m_progress;
+
 };
 
 #endif // FILEWORKER_H
