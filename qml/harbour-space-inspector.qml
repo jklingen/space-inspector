@@ -22,7 +22,7 @@ import "pages"
 
 ApplicationWindow
 {
-    initialPage: Component { TreeMapPage {} }
+    initialPage: Component { PlacesPage {} }
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
 }
 

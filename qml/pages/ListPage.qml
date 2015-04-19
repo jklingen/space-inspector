@@ -40,6 +40,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: qsTr("Goto...")
+                onClicked: {
+                    pageStack.push("../pages/PlacesPage.qml",{nodeModel:nodeModel})
+                }
+            }
+            MenuItem {
                 text: qsTr("Refresh")
                 onClicked: {
                     refreshPage()

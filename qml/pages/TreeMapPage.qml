@@ -42,6 +42,12 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: qsTr("Goto...")
+                onClicked: {
+                    pageStack.push("../pages/PlacesPage.qml",{nodeModel:nodeModel})
+                }
+            }
+            MenuItem {
                 text: qsTr("Refresh")
                 onClicked: {
                     refreshPage()
@@ -177,7 +183,7 @@ Page {
     }
 
     function createNodeModel() {
-        return {dir:'/', isDir:true, size: 0}
+        return {dir:engine.homeFolder(), isDir:true, size: 0}
     }
 
     function refreshPage() {
