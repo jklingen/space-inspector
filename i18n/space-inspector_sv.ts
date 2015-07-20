@@ -172,7 +172,7 @@ you’ve got — it will be full.</source>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
-        <translation>Space Inspector hittar stora mappar.och filer i ditt lagringsutrymme.</translation>
+        <translation>Space Inspector hittar stora mappar och filer i ditt lagringsutrymme.</translation>
     </message>
     <message>
         <source>Questions, problems, suggestions?</source>
