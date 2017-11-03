@@ -35,6 +35,77 @@ belegt von
     </message>
 </context>
 <context>
+    <name>Engine</name>
+    <message>
+        <source>Destination does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can&apos;t overwrite itself</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can&apos;t move/copy to itself</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--- Binary file preview clipped at %1 kB ---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--- Text file preview clipped at %1 lines ---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--- Text file preview clipped at %1 kB ---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create folder %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No files to paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Broken symbolic link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can&apos;t read this type of file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No permission to read the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error reading file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No permissions to create %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot rename %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot change permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FileWorker</name>
     <message>
         <source>File operation already in progress</source>
@@ -54,6 +125,14 @@ belegt von
     </message>
     <message>
         <source>Cancelled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source folder doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can&apos;t create target folder %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -101,17 +180,16 @@ Du hast — er wird voll sein.</translation>
         <translation>%1 Diagramm-Implementierung von Imran Ghory. Außerdem vielen Dank an Kari für die großartige Arbeit an %2.</translation>
     </message>
     <message>
+        <source>Do you like this app?</source>
+        <translation>Magst Du diese App?</translation>
+    </message>
+    <message>
         <source>Buy me a beer :)</source>
         <translation>Gib mir einen aus :)</translation>
     </message>
     <message>
         <source>Cheers!</source>
         <translation>Prost!</translation>
-    </message>
-    <message>
-        <source>translation credits</source>
-        <extracomment>Honoring your efforts, e.g. &quot;English translation by %YOUR_NAME%&quot; or &quot;Deutsche Übersetzung von %DEIN_NAME%&quot;</extracomment>
-        <translation>Deutsche Übersetzung von Jens Klingen</translation>
     </message>
 </context>
 <context>
@@ -128,10 +206,6 @@ Du hast — er wird voll sein.</translation>
         <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
     </message>
-    <message>
-        <source>Go to...</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
@@ -146,29 +220,6 @@ Du hast — er wird voll sein.</translation>
     <message>
         <source>Delete %1</source>
         <translation>%1 löschen</translation>
-    </message>
-</context>
-<context>
-    <name>PlacesPage</name>
-    <message>
-        <source>Go to...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Root directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>User directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SD card</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Android storage</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -213,10 +264,6 @@ Du hast — er wird voll sein.</translation>
     <message>
         <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
-    </message>
-    <message>
-        <source>Go to...</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

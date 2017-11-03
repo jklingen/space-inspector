@@ -29,8 +29,6 @@ Page {
         anchors.fill: parent
         contentHeight: childRect.height
 
-        GlobalPushUpMenu {}
-
         Rectangle {
             id:childRect
             width:parent.width
@@ -58,12 +56,10 @@ Page {
                 PlaceButton {
                     path: engine.sdcardPath()
                     text: qsTr("SD card")
-                    visible: engine.sdcardPath() && engine.exists(engine.sdcardPath())
                 }
                 PlaceButton {
                     path: engine.androidSdcardPath()
                     text: qsTr("Android storage")
-                    visible: engine.androidSdcardPath() && engine.exists(engine.androidSdcardPath())
                 }
 
 

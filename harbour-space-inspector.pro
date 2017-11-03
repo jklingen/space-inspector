@@ -25,7 +25,7 @@ i18n.files = i18n/space-inspector_de.qm
 
 INSTALLS += i18n
 
-system(lrelease $$PWD/i18n/*.ts)
+#system(lrelease $$PWD/i18n/*.ts)
 
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
