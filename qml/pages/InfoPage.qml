@@ -99,6 +99,7 @@ Page {
                         text: 'Github'
                         onClicked: Qt.openUrlExternally("https://github.com/jklingen/space-inspector/issues");
                     }
+                    Spacer {}
                     Button {
                         text: 'Twitter'
                         onClicked: Qt.openUrlExternally("https://twitter.com/jklingen");
@@ -111,31 +112,41 @@ Page {
                     anchors.margins: Theme.paddingLarge
                     font.bold: true
                     color: Theme.highlightColor
-                    text: qsTr("Do you like this app?")
+                    text: qsTr("Free & open source!")
                 }
-                Button {
+
+                Row {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: qsTr('Buy me a beer :)')
-                    onClicked: {
-                        Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40jklingen%2ecom&lc=US&item_name=Jens%20Klingen&no_note=0&cn=Message%20to%20Jens%3a&no_shipping=2&rm=1&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amount=3&item_name=A%20beer%20for%Space%20Inspector%20-%20cheers!");
-                        text = qsTr('Cheers!')
+
+                    Button {
+                        text: qsTr('GPL version 3')
+                        onClicked: Qt.openUrlExternally("http://www.gnu.org/licenses/gpl-3.0.txt");
+                    }
+                    Spacer {}
+                    Button {
+                        text: qsTr('Buy me a beer :)')
+                        onClicked: {
+                            Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40jklingen%2ecom&lc=US&item_name=Jens%20Klingen&no_note=0&cn=Message%20to%20Jens%3a&no_shipping=2&rm=1&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amount=3&item_name=A%20beer%20for%Space%20Inspector%20-%20cheers!");
+                            text = qsTr('Cheers!')
+                        }
                     }
                 }
 
                 Spacer {}
+
                 Label {
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    id:translatorCredit
+                    width:parent.width
                     anchors.margins: Theme.paddingLarge
-                    font.bold: true
+                    horizontalAlignment: Text.AlignHCenter
+                    wrapMode: Text.WordWrap
                     color: Theme.highlightColor
-                    text: qsTr("Free & open source!")
+                    font.pixelSize: Theme.fontSizeSmall
+                    //: Honoring your efforts, e.g. "English translation by %YOUR_NAME%" or "Deutsche Übersetzung von %DEIN_NAME%"
+                    text: qsTr("translation credits")
+                    visible:qsTr("translation credits")!=="translation credits"
                 }
 
-                Button {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    text: qsTr('GPL version 3')
-                    onClicked: Qt.openUrlExternally("http://www.gnu.org/licenses/gpl-3.0.txt");
-                }
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.margins: Theme.paddingLarge

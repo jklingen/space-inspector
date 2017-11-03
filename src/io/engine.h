@@ -32,6 +32,10 @@ public:
     Q_INVOKABLE QString sdcardPath() const;
     Q_INVOKABLE QString androidSdcardPath() const;
 
+    // synchronous methods
+    Q_INVOKABLE bool exists(QString filename);
+    Q_INVOKABLE QStringList diskSpace(QString path);
+
     // access settings
     Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
     Q_INVOKABLE void writeSetting(QString key, QString value);
