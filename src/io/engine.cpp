@@ -8,6 +8,7 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <unistd.h>
 #include "globals.h"
 #include "fileworker.h"
 #include "statfileinfo.h"
