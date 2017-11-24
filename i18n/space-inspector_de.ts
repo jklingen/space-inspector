@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE" sourcelanguage="en_US">
+<TS version="2.0" language="de_DE" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
@@ -35,105 +35,26 @@ belegt von
     </message>
 </context>
 <context>
-    <name>Engine</name>
-    <message>
-        <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t overwrite itself</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t move/copy to itself</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Empty file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>--- Binary file preview clipped at %1 kB ---</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>--- Text file preview clipped at %1 lines ---</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>--- Text file preview clipped at %1 kB ---</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No files to paste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File does not exist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t read this type of file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error reading file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>FileWorker</name>
     <message>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateioperation läuft bereits</translation>
     </message>
     <message>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateiname leer</translation>
     </message>
     <message>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei nicht gefunden</translation>
     </message>
     <message>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzeichnis löschen fehlgeschlagen</translation>
     </message>
     <message>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Source folder doesn&apos;t exist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Abgebrochen</translation>
     </message>
 </context>
 <context>
@@ -152,12 +73,6 @@ belegt von
     <message>
         <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
         <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
-    </message>
-    <message>
-        <source>No matter how much storage
-you’ve got — it will be full.</source>
-        <translation>Es ist egal, wie viel Speicherplatz 
-Du hast — er wird voll sein.</translation>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
@@ -191,6 +106,10 @@ Du hast — er wird voll sein.</translation>
         <source>Cheers!</source>
         <translation>Prost!</translation>
     </message>
+    <message>
+        <source>No matter how much storage you have got - it will be full.</source>
+        <translation>Es ist egal, wie viel Speicherplatz Du hast - er wird voll sein.</translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>
@@ -206,6 +125,10 @@ Du hast — er wird voll sein.</translation>
         <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
     </message>
+    <message>
+        <source>Go to...</source>
+        <translation>Wechseln zu...</translation>
+    </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
@@ -220,6 +143,29 @@ Du hast — er wird voll sein.</translation>
     <message>
         <source>Delete %1</source>
         <translation>%1 löschen</translation>
+    </message>
+</context>
+<context>
+    <name>PlacesPage</name>
+    <message>
+        <source>Go to...</source>
+        <translation>Wechseln zu...</translation>
+    </message>
+    <message>
+        <source>Root directory</source>
+        <translation>Stammverzeichnis</translation>
+    </message>
+    <message>
+        <source>User directory</source>
+        <translation>Benutzerverzeichnis</translation>
+    </message>
+    <message>
+        <source>SD card</source>
+        <translation>SD-Karte</translation>
+    </message>
+    <message>
+        <source>Android storage</source>
+        <translation>Android-Speicher</translation>
     </message>
 </context>
 <context>
@@ -264,6 +210,10 @@ Du hast — er wird voll sein.</translation>
     <message>
         <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
+    </message>
+    <message>
+        <source>Go to...</source>
+        <translation>Wechseln zu...</translation>
     </message>
 </context>
 </TS>

@@ -21,7 +21,8 @@ CONFIG += sailfishapp_i18n
 
 
 i18n.path = /usr/share/harbour-space-inspector/i18n
-i18n.files = i18n/space-inspector_de.qm
+i18n.files = i18n/space-inspector_de.qm \
+    i18n/space-inspector_sv.qm
 
 INSTALLS += i18n
 
@@ -73,12 +74,11 @@ RESOURCES += \
     resources/resources.qrc
 
 TRANSLATIONS = \
-    i18n/space-inspector_de.ts
+    i18n/space-inspector_de.ts \
+    i18n/space-inspector_sv.ts
 
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
     qml/components/*.qml
 }
-
-

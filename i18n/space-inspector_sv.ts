@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv" sourcelanguage="en_US">
+<TS version="2.0" language="sv" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
@@ -11,9 +11,13 @@ utrymmesanvändning.</translation>
     </message>
     <message>
         <source>This might take
-some seconds.</source>
-        <translation>Det här kan ta
-några sekunder.</translation>
+a moment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Or two.</source>
+        <extracomment>Context: This might take a moment. Or two.</extracomment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27,89 +31,6 @@ några sekunder.</translation>
 använt av
 %2
 (%3)</translation>
-    </message>
-</context>
-<context>
-    <name>Engine</name>
-    <message>
-        <source>Destination does not exist</source>
-        <translation>Målmappen finns inte</translation>
-    </message>
-    <message>
-        <source>Can&apos;t overwrite itself</source>
-        <translation>Kan inte skriva över sig själv</translation>
-    </message>
-    <message>
-        <source>Can&apos;t move/copy to itself</source>
-        <translation>Kan inte flytta/kopiera till sig själv</translation>
-    </message>
-    <message>
-        <source>File does not exist
-%1</source>
-        <translation>Filen finns inte
-%1</translation>
-    </message>
-    <message>
-        <source>Broken symbolic link
-%1</source>
-        <translation>Bruten symbolisk länk
-%1</translation>
-    </message>
-    <message>
-        <source>Can&apos;t read this type of file
-%1</source>
-        <translation>Kan inte läsa den här filtypen
-%1</translation>
-    </message>
-    <message>
-        <source>No permission to read the file
-%1</source>
-        <translation>Ej behörig att läsa filen
-%1</translation>
-    </message>
-    <message>
-        <source>Error reading file
-%1</source>
-        <translation>Läsfel för filen
-%1</translation>
-    </message>
-    <message>
-        <source>Empty file</source>
-        <translation>Tom fil</translation>
-    </message>
-    <message>
-        <source>--- Binary file preview clipped at %1 kB ---</source>
-        <translation>--- Binärfilsgranskning klippt vid %1 kB ---</translation>
-    </message>
-    <message>
-        <source>--- Text file preview clipped at %1 lines ---</source>
-        <translation>--- Textfilsgranskning klippt vid %1 rader ---</translation>
-    </message>
-    <message>
-        <source>--- Text file preview clipped at %1 kB ---</source>
-        <translation>--- Textfilsgranskning klippt vid %1 kB ---</translation>
-    </message>
-    <message>
-        <source>Cannot create folder %1
-Permission denied</source>
-        <translation>Kan inte skapa mappen %1
-Behörighet saknas</translation>
-    </message>
-    <message>
-        <source>Cannot create folder %1</source>
-        <translation>Kan inte skapa mappen %1</translation>
-    </message>
-    <message>
-        <source>Cannot rename %1
-%2</source>
-        <translation>Kan inte byta namn på %1
-%2</translation>
-    </message>
-    <message>
-        <source>Cannot change permissions
-%1</source>
-        <translation>Kan inte ändra behörighet
-%1</translation>
     </message>
 </context>
 <context>
@@ -134,14 +55,6 @@ Behörighet saknas</translation>
         <source>Cancelled</source>
         <translation>Avbruten</translation>
     </message>
-    <message>
-        <source>Source folder doesn&apos;t exist</source>
-        <translation>Källmappen finns inte</translation>
-    </message>
-    <message>
-        <source>Can&apos;t create target folder %1</source>
-        <translation>Kan inte skapa målmappen %1</translation>
-    </message>
 </context>
 <context>
     <name>GlobalPushUpMenu</name>
@@ -153,22 +66,12 @@ Behörighet saknas</translation>
 <context>
     <name>InfoPage</name>
     <message>
-        <source>About</source>
-        <translation>Om</translation>
-    </message>
-    <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>Copyright © %2 Jens Klingen</source>
-        <translation>Copyright © %2 Jens Klingen</translation>
-    </message>
-    <message>
-        <source>No matter how much storage
-you’ve got — it will be full.</source>
-        <translation>Hur mycket lagringsutrymme du 
-än har — det blir fullt.</translation>
+        <source>No matter how much storage you have got - it will be full.</source>
+        <translation>Hur mycket lagringsutrymme du än har - det blir fullt.</translation>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
@@ -190,6 +93,22 @@ you’ve got — it will be full.</source>
         <source>%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.</source>
         <translation>%1 kartläggningsimplementering av Imran Ghory. Tack också till Kari för det utmärkta arbetet med %2.</translation>
     </message>
+    <message>
+        <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you like this app?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buy me a beer :)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cheers!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>
@@ -205,6 +124,10 @@ you’ve got — it will be full.</source>
         <source>An error occurred</source>
         <translation>Ett fel uppstod</translation>
     </message>
+    <message>
+        <source>Go to...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
@@ -219,6 +142,48 @@ you’ve got — it will be full.</source>
     <message>
         <source>Delete %1</source>
         <translation>Ta bort %1</translation>
+    </message>
+</context>
+<context>
+    <name>PlacesPage</name>
+    <message>
+        <source>Go to...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Root directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SD card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Android storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>%1 bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 kB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -244,6 +209,10 @@ you’ve got — it will be full.</source>
     <message>
         <source>An error occurred</source>
         <translation>Ett fel uppstod</translation>
+    </message>
+    <message>
+        <source>Go to...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

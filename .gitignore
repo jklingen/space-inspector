@@ -3,4 +3,5 @@ node_modules/
 Thumbs.db
 harbour-space-inspector.pro.user*
 i18n/space-inspector_*.qm
-rpm/harbour-space-inspector.spec
+rpm/harbour-space-inspector.spec*
+

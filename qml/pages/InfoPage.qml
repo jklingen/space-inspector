@@ -51,7 +51,8 @@ Page {
                 height: 86
             }
             Label {
-                anchors.bottom: logo.bottom
+                id: copyright
+                anchors.top: logo.top
                 anchors.right: title.right
                 anchors.rightMargin: Theme.paddingLarge
                 wrapMode: Text.WordWrap
@@ -63,7 +64,7 @@ Page {
             }
 
             Column {
-                anchors.top:logo.bottom
+                anchors.top:copyright.bottom
                 width:parent.width
                 spacing:Theme.paddingSmall
 
@@ -72,9 +73,10 @@ Page {
                     width:parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
+                    textFormat: Text.RichText
                     font.bold: true
                     color: Theme.highlightColor
-                    text: qsTr("No matter how much storage\nyou’ve got — it will be full.")
+                    text: qsTr("No matter how much storage you have got - it will be full.")
                 }
                 Label {
                     width:parent.width
@@ -99,6 +101,7 @@ Page {
                         text: 'Github'
                         onClicked: Qt.openUrlExternally("https://github.com/jklingen/space-inspector/issues");
                     }
+                    Spacer {}
                     Button {
                         text: 'Twitter'
                         onClicked: Qt.openUrlExternally("https://twitter.com/jklingen");

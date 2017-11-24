@@ -42,7 +42,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Goto...")
+                text: qsTr("Go to...")
                 onClicked: {
                     pageStack.push("../pages/PlacesPage.qml",{nodeModel:nodeModel})
                 }

@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
     QString locale = QLocale::system().name();
-    //locale="de"; // for testing purposes only
+    //locale="sv"; // for testing purposes only
     if(!translator.load("space-inspector_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
         qDebug() << "Couldn't load translation";
     }
