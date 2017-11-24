@@ -109,6 +109,11 @@ använt av
         <source>Cheers!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&lt;Translator credit&gt;</source>
+        <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>
