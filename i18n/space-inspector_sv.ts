@@ -12,12 +12,12 @@ utrymmesanvändning.</translation>
     <message>
         <source>This might take
 a moment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det här kan ta en stund.</translation>
     </message>
     <message>
         <source>Or two.</source>
         <extracomment>Context: This might take a moment. Or two.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Eller två.</translation>
     </message>
 </context>
 <context>
@@ -95,24 +95,24 @@ använt av
     </message>
     <message>
         <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
     </message>
     <message>
         <source>Do you like this app?</source>
-        <translation type="unfinished"></translation>
+        <translation>Gillar du den här appen?</translation>
     </message>
     <message>
         <source>Buy me a beer :)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bjud mig på en öl :)</translation>
     </message>
     <message>
         <source>Cheers!</source>
-        <translation type="unfinished"></translation>
+        <translation>Skål!</translation>
     </message>
     <message>
         <source>&lt;Translator credit&gt;</source>
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Svensk översättning av &lt;a href=\&quot;https://svenskasprakfiler.se\&quot;&gt;eson&lt;/a&gt;&quot;</translation>
     </message>
 </context>
 <context>
@@ -131,7 +131,7 @@ använt av
     </message>
     <message>
         <source>Go to...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gå till...</translation>
     </message>
 </context>
 <context>
@@ -153,42 +153,42 @@ använt av
     <name>PlacesPage</name>
     <message>
         <source>Go to...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gå till...</translation>
     </message>
     <message>
         <source>Root directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Root-mapp</translation>
     </message>
     <message>
         <source>User directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Användarmapp</translation>
     </message>
     <message>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Minneskort</translation>
     </message>
     <message>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Android-lagring</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>%1 bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 byte</translation>
     </message>
     <message>
         <source>%1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <source>%1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
         <source>%1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 GB</translation>
     </message>
 </context>
 <context>
@@ -217,7 +217,7 @@ använt av
     </message>
     <message>
         <source>Go to...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gå till...</translation>
     </message>
 </context>
 </TS>
