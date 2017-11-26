@@ -29,6 +29,8 @@ Page {
         anchors.fill: parent
         contentHeight: childRect.height
 
+        GlobalPushUpMenu {}
+
         Rectangle {
             id:childRect
             width:parent.width
