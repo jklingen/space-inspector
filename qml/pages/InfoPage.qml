@@ -31,6 +31,8 @@ Page {
 
         Rectangle {
             id:childRect
+            anchors.leftMargin: Theme.paddingLarge
+            anchors.rightMargin: Theme.paddingLarge
             width:parent.width
             height:childrenRect.height
             color:'transparent'
@@ -58,15 +60,16 @@ Page {
                 wrapMode: Text.WordWrap
                 textFormat: Text.RichText
                 horizontalAlignment: Text.AlignRight
-                text: '<strong>' + qsTr('Version %1').arg('0.6') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen").arg('2014 - 2015')
+                text: '<strong>' + qsTr('Version %1').arg('0.6') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen").arg('2014 - 2017')
                 color:Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
             }
 
             Column {
-                anchors.top:copyright.bottom
-                width:parent.width
-                spacing:Theme.paddingSmall
+                anchors.top: copyright.bottom
+                anchors.left: logo.left
+                anchors.right: copyright.right
+                spacing: Theme.paddingSmall
 
                 Spacer {}
                 Label {
@@ -139,6 +142,22 @@ Page {
                     text: qsTr('GPL version 3')
                     onClicked: Qt.openUrlExternally("http://www.gnu.org/licenses/gpl-3.0.txt");
                 }
+
+                Spacer {}
+                Label {
+                    width:parent.width
+                    anchors.margins: Theme.paddingLarge
+                    horizontalAlignment: Text.AlignHCenter
+                    wrapMode: Text.WordWrap
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeSmall
+                    textFormat: Text.RichText
+                    //: If wanted, add translator info in your language, e.g. "English translation by <a href=\"https://github.com/jklingen/\">Jens Klingen</a>"
+                    text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
+                        qsTr("[Translator credit]") + ""
+                    visible:
+                        text.length > 0 && text.indexOf("[Translator credit]") == -1
+                }
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.margins: Theme.paddingLarge
@@ -153,6 +172,7 @@ Page {
                             .arg('<a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a>')
                             .arg('<a href="https://github.com/karip/harbour-file-browser">File Browser</a>')
                 }
+                Spacer {}
             }
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sv" sourcelanguage="en_US">
+<TS version="2.1" language="sv" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
@@ -110,9 +110,9 @@ använt av
         <translation>Skål!</translation>
     </message>
     <message>
-        <source>&lt;Translator credit&gt;</source>
+        <source>[Translator credit]</source>
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
-        <translation>Svensk översättning av &lt;a href=\&quot;https://svenskasprakfiler.se\&quot;&gt;eson&lt;/a&gt;&quot;</translation>
+        <translation>Svensk översättning av &lt;a href=\&quot;https://svenskasprakfiler.se\&quot;&gt;eson&lt;/a&gt;</translation>
     </message>
 </context>
 <context>

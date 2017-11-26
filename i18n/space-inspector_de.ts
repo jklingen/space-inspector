@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE" sourcelanguage="en_US">
+<TS version="2.1" language="de_DE" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
@@ -109,6 +109,11 @@ belegt von
     <message>
         <source>No matter how much storage you have got - it will be full.</source>
         <translation>Es ist egal, wie viel Speicherplatz Du hast - er wird voll sein.</translation>
+    </message>
+    <message>
+        <source>[Translator credit]</source>
+        <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
+        <translation></translation>
     </message>
 </context>
 <context>

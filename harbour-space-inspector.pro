@@ -82,3 +82,6 @@ SOURCES += \
     qml/pages/*.qml \
     qml/components/*.qml
 }
+
+DISTFILES += \
+    i18n/space-inspector_sv.ts
