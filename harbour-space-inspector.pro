@@ -75,8 +75,8 @@ RESOURCES += \
 
 TRANSLATIONS = \
     i18n/space-inspector_de.ts \
-    i18n/space-inspector_sv.ts
-
+    i18n/space-inspector_sv.ts \
+    i18n/space-inspector_es.ts
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
