@@ -61,7 +61,7 @@ usado de
     <name>GlobalPushUpMenu</name>
     <message>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>Acerca de</translation>
     </message>
 </context>
 <context>
