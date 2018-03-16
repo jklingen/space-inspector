@@ -120,7 +120,7 @@ usado de
     <name>ListPage</name>
     <message>
         <source>Box view</source>
-        <translation>Vista de  caja</translation>
+        <translation>Ver en`caja</translation>
     </message>
     <message>
         <source>Refresh</source>
@@ -132,14 +132,14 @@ usado de
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a...</translation>
+        <translation>Ir a</translation>
     </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
     <message>
         <source>Collapse %1</source>
-        <translation>%1 colapso</translation>
+        <translation>%1 colapsar</translation>
     </message>
     <message>
         <source>Open %1</source>
@@ -210,7 +210,7 @@ usado de
     </message>
     <message>
         <source>List view</source>
-        <translation>Vista de la lista</translation>
+        <translation>Ver en lista</translation>
     </message>
     <message>
         <source>An error occurred</source>
@@ -218,7 +218,7 @@ usado de
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a...</translation>
+        <translation>Ir a</translation>
     </message>
 </context>
 </TS>
