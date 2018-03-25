@@ -113,7 +113,7 @@ usado de
     <message>
         <source>[Translator credit]</source>
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
-        <translation>Si lo desea, agregue información del traductor de su lenguaje, e.j. &quot;Traducción al inglés por &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</translation>
+        <translation>[Crédito de traductor]</translation>
     </message>
 </context>
 <context>
