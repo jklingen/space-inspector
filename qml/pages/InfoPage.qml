@@ -1,6 +1,6 @@
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2017 Jens Klingen
+    Copyright (C) 2014 - 2018 Jens Klingen
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textFormat: Text.RichText
                 horizontalAlignment: Text.AlignRight
-                text: '<strong>' + qsTr('Version %1').arg('0.6') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen").arg('2014 - 2017')
+                text: '<strong>' + qsTr('Version %1').arg('0.7') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen").arg('2014 - 2018')
                 color:Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
             }
