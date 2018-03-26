@@ -22,6 +22,7 @@ CONFIG += sailfishapp_i18n
 
 i18n.path = /usr/share/harbour-space-inspector/i18n
 i18n.files = i18n/space-inspector_de.qm \
+    i18n/space-inspector_es.qm \
     i18n/space-inspector_sv.qm
 
 INSTALLS += i18n
@@ -58,7 +59,6 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
     qml/components/TreeMapNodeCollapsed.qml\
-    i18n/space-inspector_de.ts \
     qml/components/Spacer.qml \
     qml/pages/PlacesPage.qml \
     qml/components/PlaceButton.qml
@@ -75,11 +75,16 @@ RESOURCES += \
 
 TRANSLATIONS = \
     i18n/space-inspector_de.ts \
-    i18n/space-inspector_sv.ts \
-    i18n/space-inspector_es.ts
+    i18n/space-inspector_es.ts \
+    i18n/space-inspector_sv.ts
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
     qml/components/*.qml
 }
+
+DISTFILES += \
+    i18n/space-inspector_de.ts \
+    i18n/space-inspector_es.ts \
+    i18n/space-inspector_sv.ts
 
