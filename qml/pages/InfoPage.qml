@@ -152,6 +152,7 @@ Page {
                     color: Theme.highlightColor
                     font.pixelSize: Theme.fontSizeSmall
                     textFormat: Text.RichText
+                    onLinkActivated: function(url) {Qt.openUrlExternally(url)}
                     //: If wanted, add translator info in your language, e.g. "English translation by <a href=\"https://github.com/jklingen/\">Jens Klingen</a>"
                     text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
                         qsTr("[Translator credit]") + ""
@@ -166,6 +167,7 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
                     textFormat: Text.RichText
+                    onLinkActivated: function(url) {Qt.openUrlExternally(url)}
                     color: Theme.secondaryHighlightColor
                     text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
                         qsTr('%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.')
