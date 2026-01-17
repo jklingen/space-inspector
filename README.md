@@ -1,6 +1,10 @@
 Space Inspector
 ===============
 
+⚠️ Unfortunately, I can no longer maintain this project. You might be interested in [@a-dekker](https://github.com/a-dekker)'s [fork of Space Inspector](https://github.com/a-dekker/space-inspector). ⚠️
+
+-----
+
 Filesystem structure visualization for SailfishOS
 
 **No matter how much storage you’ve got — it will be full.**
